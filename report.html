@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="keywords" content="Food, Cooking, Photography, Recipes, Guacamole, Wine, Thai, Sushi, Eating, Baking">
+
+    <!--This adds a favicon item to the tab which is a nice touch-->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>YummyChef</title>
+
+</head>
+
+<body class="report">
+    <h3>
+        Introduction
+    </h3>
+    <p>
+        My website is a cooking club magazine called YummyChef, it intends to bring likeminded chefs together to cook,
+        bake and learn
+        together. It is a central place where recipes, events and other cooking-inspired activities can be found. It tells the story of people who are
+        passionate about cooking and who want to better their skills in the company of other chefs. I chose to implement a ery sleek and easy to use structure that is 
+        scalable and can have more recipes added at any time.
+    </p>
+    <h3>
+        Inspiration
+    </h3>
+    <p>
+        I was inspired by the <a href="https://www.foodandhome.co.za/">Food&Home</a> website. This website is a food and home magazine that intends to share new recipes 
+        every week. Their website is full of information, and even has adverts for companies that sell food, however I preferred to
+        have a more minimalistic and modern look for my website. It was a beginning point to inspire me in what I should be striving for.
+        I also was inspired by <a href="https://www.epicurious.com/ ">Epicurious</a>. I loved how they have a search bar that allows users to effortlessly find the
+        recipe that they are looking for. They also have big eye catching images that really grab the attention of the user, this inspired me to use
+        large eye-catching images for my website too. They have a sleek layout which looks great in any web browser or mobile, I
+        achieved a similar looking sleek layout using bootstrap and css.
+        <a href="https://www.allrecipes.com/">All Recipes</a> was also an inspiration. They write a little bit about the recipes before showing how to make them,
+        this inspired me to do something similar with my website and have a photography section aswell as little informative animations over my recipe images.
+        I enjoyed the way their recipes were shown and tried to achieve a similar look using bootstrap cards. 
+        I added my own flare to my website by adding events that would be hosted by YummyChef Inc.
+    </p>
+    <h3>
+        Accessibility
+    </h3>
+    <p> All of the images have alternate descriptions so that people with visual disabilities can still have a description of what is being shown
+        this is useful for any user that may use assistive technology to help them read the site. The colour scheme for the website is very contrasting and
+        most of the text is on top of very plain backgrounds, this makes reading the website better for people with visual disabilities. </p>
+    <p> The website uses big cards to display recipes, and big buttons to navigate the web page, people with motor skill disabilities will find it 
+        easy to use these big buttons and will be able to navigate to recipes easily.
+    </p>
+    <p> The different sections of my webpage use appropriate tags to show a difference between heading and paragraphs. I
+        use the h4, h3, h2, and h1 tags with care and thought. This will help any assistive technology to decipher why certain sections are placed 
+        where they are and in turn will help the user to navigate through the site</p>
+    <h3>
+        Useability
+    </h3>
+    <p> The website is incredibly easy to use as all the main information is at the top navigation tags, that is; I have a clear
+        navigation scheme which feels natural to the user, and
+        there are even links that can take you directly to a portion of a page that you may be looking for (i.e the
+        “about us" link </p>
+    <p> I also conducted useability tests with my family and friends about a week before the project deadline to adjust
+        the website to be more user friendly.
+        I instructed them to find certain aspects of the page and depending on how much they struggled, I then
+        rearranged my layout to accommodate them.</p>
+    <p> I have optimized the performance of the page by using the two second rule, if anything took longer than two
+        seconds to load I would look at ways to either make
+        the image files smaller or look at what is causing the sluggishness (ie if the JS was written ineffectively).
+    </p>
+    <p> My website has also been designed to be responsive, I adapted the code to account for all the mobile devices
+        that are given on chrome.
+        This means that my site works smoothly regardless of the device it is displayed on. I used bootstrap mostly to
+        accomplish this, and where bootstrap couldn’t provide me
+        with the layout I desired, I then used CSS to override the bootstrap commands.</p>
+    <h3>
+        What I had to learn/find out
+    </h3>
+    <p> I was originally not that familiar with any tool to help with web design, in fact I really struggled to grasp
+        the concept of html and css.
+        So I did most of my research on bootstrap straight from the <a
+            href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"> bootstrap 5 website</a>,
+        (you will see this in the code, majority of my spacing is controlled by bootstrap). This made the
+        coding process
+        so much easier and I really enjoyed the grid system
+        (I know some people are not a fan). I found myself being inspired by the capabilities of this framework.
+        The responsiveness using bootstrap was also completely
+        new to me and in many aspects the responsiveness was limited and wouldn’t display elements the way I wanted them
+        to be shown, so I also had to learn to what extent
+        css can override bootstrap commands by trial and error and using the console on Chrome. I eventually
+        discovered that the “!important” command in css
+        can override bootstrap commands.</p>
+    <p> I had to learn about animations and how to apply them to elements only when the scrollbar comes close to them, I
+        did this by watching some youtube tutorials
+        (these are referenced where I used them in the code aswell). I also had to learn about how the different
+        animations work for different browsers and how to implement
+        this difference in my css code. I had to learn how to create hover effects over an image. Initially the idea was to create a hover effect that
+        covered the entire photo, I tried a few different
+        techniques that didn’t work, as my images were contained in bootstrap cards and the formatting was always going
+        over the picture.
+        I found a resource that explained how to get writing to only partially show over an image and I adapted this to
+        work within cards, this is referenced in the code.</p>
+    <p> I had issues trying to pass variables between pages because I didn’t know that the javascript files are
+        reloaded everytime a user navigates to another page.
+        This was such an interesting journey and definitely had me scratching my head as to why my parameters were not
+        being passed, as I have never worked with a multiple
+        web page project that implements Javascript. I found out by many google searches that the fix is to store the
+        variable in “localStorage”. </p>
+
+    <h3>What aspects worked well and why?</h3>
+    <p>I am pleasantly surprised at how well my entire project turned out, I kept battling with little pieces until I
+        looked at the project I had created and it was this
+        complex beautiful design. I think the way I laid everything out is aesthetically pleasing, and this has been
+        confirmed by family and friends that tested the useability
+        of the site. </p>
+    <p>One of my favourite features of the site is how the words on the top jumbotrons fade in, it gives the site this
+        sleek polished look. I also love how I implemented
+        the “single-recipes” page, this page dynamically creates itself depending on which recipe was selected in the
+        previous page. It looks a bit simple to the user,
+        but the javascript that made that happen took me a lot of time and careful thought. I decided to implement
+        objects to hold the recipe information,
+        this way if in future more recipes are to be added all the developer will have to do is just create an object
+        for the recipe and when the user clicks on its card it
+        will be dynamically created. This was fun for me to implement because I used my Intro To Programming 2 knowledge
+        to modify the DOM. I must admit, although this
+        course encouraged us to use a templating engine such as mustache, it just didn’t feel intuitive to me and the
+        resources available for its javascript implementation
+        were scarce, so I decided to stick with what I know which is vanilla Javascript. </p>
+
+    <h3>What aspects could be improved and how might you do things differently next time? </h3>
+    <p>I think I could use Javascript to dynamically create the recipe cards based on what objects are present
+        in the Javascript file,
+        this would make maintenance of the site so much easier and would allow the user to remove and add recipes at
+        their leisure,
+        this could also be organized according to the date they were added. </p>
+    <p>I also could add functionaliy to the search bar at the top of the website, currently that search bar is just
+        present as a place holder,
+        but adding functionaliy to it would make the site a lot more user friendly and would help the users
+        immediately find the recipe they are looking for. </p>
+    <p>I also wanted to add categories to the recipes page such as “beef”, “vegetarian”, “chicken” etc, as to further
+        filter the recipes so the user can find what they are
+        looking for easily. </p>
+    <p>I would probably want to use something like JQuery next time to modify the html, I think it would be quicker and
+        probably easier to understand from an outside party. </p>
+    <p>I could also make the links to social media at the footer actually work and link to real social media pages (this
+        would only be possible if the website was being built
+        for a real company)</p>
+
+    <h3>What resources were used? </h3>
+    <ul>
+        <li>I learned most of my html coding from the <a
+                href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">bootstrap 5 website</a></li>
+        <li>I used youtube programming videos such as the <a
+                href="https://www.youtube.com/watch?v=eow125xV5-c&list=PLS5t95tNQJJK4kptptWjNGU0DnLjtSZoI&index=1">bootstrap
+                tutorial</a></li>
+        <li>I used the <a href="https://fontawesome.com/">awesome fonts</a> icon library</li>
+        <li><a href="https://www.w3schools.com/">W3C schools</a> for a lot of the html and css resources</li>
+        <li>I used <a href="https://www.google.co.za/">Google</a> with the extension <a
+                href="https://chrome.google.com/webstore/detail/grepper/amaaokahonnfjjemodnpmeenfpnnbkco?hl=en">Grepper</a>
+            to help me search for coding solutions quickly </li>
+        <li>Most of my images were from <a href="https://www.pexels.com/">Pexels</a>(they are referenced as they are
+            used in the code)</li>
+        <li>I used the <a href="https://getbootstrap.com/">bootstrap library</a></li>
+    </ul>
+
+    <h3>Mockups</h3>
+    <h4>Large Screen Mockups</h4>
+    <p><strong>Index</strong></p>
+    <ul>
+
+        <li><a href="assets/img/Mockups/IndexLargePt1.JPG"> Index Part 1</a></li>
+        <li><a href="assets/img/Mockups/IndexLargePart2.JPG"> Index Part 2</a></li>
+        <li><a href="assets/img/Mockups/IndexLargePart3.JPG"> Index Part 3</a></li>
+        <li><a href="assets/img/Mockups/IndexLargePart4.JPG"> Index Part 4</a></li>
+    </ul>
+
+    <p><strong>Recipes</strong></p>
+    <ul>
+        <li><a href="assets/img/Mockups/RecipesLargePart1.JPG"> Recipes Part 1</a></li>
+        <li><a href="assets/img/Mockups/RecipesLargePart2.JPG"> Recipes Part 2</a></li>
+    </ul>
+
+    <p><strong>Single Recipes</strong></p>
+    <ul>
+        <li><a href="assets/img/Mockups/SingleRecipesLargePart1.JPG">Single Recipes Part 1</a></li>
+        <li><a href="assets/img/Mockups/SingleRecipesLargePart2.JPG">Single Recipes Part 2</a></li>
+    </ul>
+
+    <p><strong>How To</strong></p>
+    <ul>
+        <li><a href="assets/img/Mockups/HowToLargePart1.JPG"> How To Part 1</a></li>
+        <li><a href="assets/img/Mockups/HowToLargePart2.JPG"> How To Part 2</a></li>
+        <li><a href="assets/img/Mockups/HowToLargePart3.JPG"> How To Part 3</a></li>
+        <li><a href="assets/img/Mockups/HowToLargePart4.JPG"> How To Part 4</a></li>
+        <li><a href="assets/img/Mockups/HowToLargePart5.JPG"> How To Part 5</a></li>
+    </ul>
+
+    <p><strong>Events</strong></p>
+    <ul>
+        <li><a href="assets/img/Mockups/EventsLargePart1.JPG"> Events Part 1</a></li>
+        <li><a href="assets/img/Mockups/EventsLargePart2.JPG"> Events Part 2</a></li>
+        <li><a href="assets/img/Mockups/EventsLargePart3.JPG"> Events Part 3</a></li>
+        <li><a href="assets/img/Mockups/EventsLargePart4.JPG"> Events Part 4</a></li>
+    </ul>
+
+    <p><strong>Contact Us</strong></p>
+    <ul>
+        <li><a href="assets/img/Mockups/ContactUsLarge.JPG"> Contact Us</a></li>
+    </ul>
+
+    <h4>Small Screen Mockups</h4>
+        <p><strong>Index</strong></p>
+        <ul>
+        <li><a href="assets/img/Mockups/IndexSmallPart1.JPG"> Index Part 1</a></li>
+        <li><a href="assets/img/Mockups/IndexSmallPart2.JPG"> Index Part 2</a></li>
+        <li><a href="assets/img/Mockups/IndexSmallPart3.JPG"> Index Part 3</a></li>
+        <li><a href="assets/img/Mockups/IndexSmallPart4.JPG"> Index Part 4</a></li>
+    </ul>
+
+        <p><strong>Recipes</strong></p>
+        <ul>
+        <li><a href="assets/img/Mockups/RecipesSmallPart1.JPG"> Recipes Part 1</a></li>
+        <li><a href="assets/img/Mockups/RecipesSmallPart2.JPG"> Recipes Part 2</a></li>
+        <li><a href="assets/img/Mockups/RecipesSmallPart3.JPG"> Recipes Part 3</a></li>
+        <li><a href="assets/img/Mockups/RecipesSmallPart4.JPG"> Recipes Part 4</a></li>
+        </ul>
+
+        <p><strong>Single Recipes</strong></p>
+        <ul>
+        <li><a href="assets/img/Mockups/SingleRecipesSmallPart1.JPG">Single Recipes Part 1</a></li>
+        <li><a href="assets/img/Mockups/SingleRecipesSmallPart2.JPG">Single Recipes Part 2</a></li>
+        <li><a href="assets/img/Mockups/SingleRecipesSmallPart3.JPG">Single Recipes Part 3</a></li>
+        </ul>
+
+        <p><strong>How To</strong></p>
+        <ul>
+        <li><a href="assets/img/Mockups/HowToSmallPart1.JPG"> How To Part 1</a></li>
+        <li><a href="assets/img/Mockups/HowToSmallPart2.JPG"> How To Part 2</a></li>
+        <li><a href="assets/img/Mockups/HowToSmallPart3.JPG"> How To Part 3</a></li>
+        <li><a href="assets/img/Mockups/HowToSmallPart4.JPG"> How To Part 4</a></li>
+        </ul>
+
+        <p><strong>Events</strong></p>
+        <ul>
+        <li><a href="assets/img/Mockups/EventsSmallPart1.JPG"> Events Part 1</a></li>
+        <li><a href="assets/img/Mockups/EventsSmallPart2.JPG"> Events Part 2</a></li>
+        <li><a href="assets/img/Mockups/EventsSmallPart3.JPG"> Events Part 3</a></li>
+        <li><a href="assets/img/Mockups/EventsSmallPart4.JPG"> Events Part 4</a></li>
+        <li><a href="assets/img/Mockups/EventsSmallPart5.JPG"> Events Part 5</a></li>
+        </ul>
+
+        <p><strong>Contact Us</strong></p>
+        <ul>
+        <li><a href="assets/img/Mockups/ContactUsSmallPart1.JPG"> Contact Us Part 1</a></li>
+        <li><a href="assets/img/Mockups/ContactUsSmallPart2.JPG"> Contact Us Part 2</a></li>
+        </ul>
+
+
+
+    <h4>Wireframes</h4>
+    <ul>
+        <li><a href="assets/img/Wireframes/IndexLargePart1.JPG"> index.html Large Screen Part 1</a> </li>
+        <li><a href="assets/img/Wireframes/IndexLargePart2.JPG"> index.html Large Screen Part 2</a> </li>
+        <li><a href="assets/img/Wireframes/IndexSmall.JPG"> index.html Small Screen</a> </li>
+
+        <li><a href="assets/img/Wireframes/RecipesLarge.JPG"> recipes.html Large Screen</a> </li>
+        <li><a href="assets/img/Wireframes/RecipesSmall.JPG"> recipes.html Small Screen</a> </li>
+
+        <li><a href="assets/img/Wireframes/SingleRecipeLarge.JPG"> single-recipe.html Large Screen</a> </li>
+        <li><a href="assets/img/Wireframes/SingleRecipeSmall.JPG"> single-recipe.html Small Screen</a> </li>
+
+        <li><a href="assets/img/Wireframes/HowToLarge.JPG"> howto.html Large Screen</a> </li>
+        <li><a href="assets/img/Wireframes/HowToSmall.JPG"> howto.html Small Screen</a> </li>
+
+        <li><a href="assets/img/Wireframes/EventsLarge.JPG"> events.html Large Screen</a> </li>
+        <li><a href="assets/img/Wireframes/EventsSmall.JPG"> events.html Small Screen</a> </li>
+
+        <li><a href="assets/img/Wireframes/ContactUsLarge.JPG"> contactus.html Large Screen</a> </li>
+        <li><a href="assets/img/Wireframes/ContactUsSmall.JPG"> contactus.html Small Screen</a> </li>
+    </ul>
+
+    <h4> Site Map</h4>
+    <ul>
+        <li><a href="assets/img/SiteMap/SiteMap.pdf">Site Map</a> </li>
+    </ul>
+</body>
+
+</html>

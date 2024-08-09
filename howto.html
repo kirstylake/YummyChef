@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="keywords" content="Food, Cooking, Photography, Recipes, Guacamole, Wine, Thai, Sushi, Eating, Baking">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>YummyChef</title>
+
+    <!-- Favicon related: used to change the tab color on Chrome mobile devices -->
+    <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+    <!-- Create the top container with the logo and the search bar and some links using a flexbox approach-->
+    <header>
+        <div class="row container-fluid">
+            <div class="d-flex flex-row justify-content-between align-items-center">
+                <div class="hide_sm_screen">
+                    <div class="d-inline-flex ">
+                        <input class="form-control mx-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark" type="submit">Search</button>
+                    </div>
+
+                </div>
+
+                <div class="py-2">
+                    <!-- I created the logo myself -->
+                    <img src="assets/img/YummyChefLogo.JPG" alt="Yummy Chef Logo">
+                </div>
+                <div class="hide_sm_screen">
+                    <a href="index.html#about_link" class="link-secondary px-2">About</a>
+                    <a href="contactus.html" class="link-secondary px-2">Contact</a>
+                    <a href="index.html#signup_link" class="link-secondary px-2">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <!-- End of top header-->
+
+        <!-- Here I add in a horizontal gutter for styling -->
+        <hr class="top" />
+
+        <!-- ?Navigation Bar code with bootstrap adaptation  -->
+        <nav class="navbar navbar-expand-lg navbar-light" id="myNav">
+            <!--? The button will only appear once the navbar items can't fit into the screen space anymore-->
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <!--These are the items contained in the navbar and in the toggle button, bootstrap makes this whole process easier-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Recipes</a>
+                    </li>
+                    <!-- Here I implement some dropdown functionality, this is extremely useful to quickly jump to different parts of the how to page-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="howto.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+                            How To
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="howto.html#dicing">Cutting/Dicing</a></li>
+                            <li><a class="dropdown-item" href="howto.html#frying">Frying/Deep Frying</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <!-- The following navbar items are hidden on larger screens and shown under the toggle button on
+                smaller screens, this adjustment is made for neatness-->
+                    <li class="nav-item">
+                        <div class="big_scr_hide">
+                            <a class="nav-link" href="index.html#about_link">About</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="big_scr_hide">
+                            <a class="nav-link" href="index.html#signup_link">Sign Up</a>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navigation Bar code with bootstrap adaptation -->
+    </header>
+
+    <div class="container-fluid">
+        <!-- Jumbotron to show the header for dicing techniques -->
+        <a id="dicing"></a>
+        <div class="jumbotron_container jumbrotron_howto ">
+            <div class="jumbotron jumbotron-fluid" id="dicing_jumbo">
+                <h1 class="display-4">Dicing/Cutting</h1>
+                <p class="lead">Learn how to dice, chop, cut all of your produce!</p>
+                <hr class="jumbo">
+            </div>
+        </div>
+
+        <!-- I learned how to embed youtube videos into cards from her: https://codingyaar.com/bootstrap-video-card/ - how to get a bootstrap video card
+     I adapted it a lot to make it more responsive and to make the videos look better, I also applied the bootstrap grid techniques to create a very cool look and feel
+    to this page -->
+
+        <!-- The rows recieve the styling on bigger screens, but when the screensize is reduced to only one column, 
+    then the styling must be appied to those rows, this is why the classes howToCol and HowTo are introduced-->
+        <div class="row HowTo">
+            <div class="col-lg-6 col-m-6 col-sm-1 howToCol">
+                <div class="card">
+                    <!-- Here we embed a youtube video into an iFrame, this allows us to have more control on its sizing -->
+                    <iframe src="https://www.youtube.com/embed/fs8cQ_tjsF8" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">How to Chop An Onion</h5>
+                        <p class="card-text">Jamie Oliver Shows us how to chop an onion. He uses many differnt methods
+                            to
+                            showcase the importance of technique.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-m-6 col-sm-1 howToCol">
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/ocsGCkEvSFA" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">How to Dice a Tomato</h5>
+                        <p class="card-text">Use these easy steps to get perfectly diced tomatoes for salsa, taco
+                            toppings, and so much more!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row HowTo">
+            <div class="col-lg-6 col-m-6 col-sm-1 howToCol">
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/12issg3EdA8" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Basic Knife Cutting Techniques</h5>
+                        <p class="card-text">Thomas Johnson shows you how to use the knife for various things in the
+                            kitchen</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-m-6 col-sm-1 howToCol">
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/Wk3scs5FqCY" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">How to Sharpen Your Knives</h5>
+                        <p class="card-text">Tasty explains how to sharpen you knives and keep them in good condition
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRYING Techniques-->
+        <a id="frying"></a>
+        <div class="jumbotron_container jumbrotron_howto ">
+            <div class="jumbotron jumbotron-fluid" id="frying_jumbo">
+                <h1 class="display-4">Frying/Deep Frying</h1>
+                <p class="lead">Learn how to dice, chop, cut all of your produce!</p>
+                <hr class="jumbo">
+            </div>
+        </div>
+
+        <div class="row HowTo">
+            <div class="col-lg-6 col-m-6 col-sm-1 howToCol">
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/v2pCvV8Dn60" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Deep Frying at Home</h5>
+                        <p class="card-text">Ethan Chlebowski explains how to deep fry all of your favourite foods at
+                            home.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-m-6 col-sm-1 howToCol">
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/ANtMFKfV3kE" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">10 Deep Frying Mistakes to Avoid</h5>
+                        <p class="card-text">Ethan Chlebowski explains how to avoid typical beginners mistake with deep
+                            fying</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row HowTo">
+            <div class="col-lg-6 col-m-6 col-sm-1 howToCol">
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/SbOx5pkheFE" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">How to Fry an Egg</h5>
+                        <p class="card-text">Curtis Stone Explains how to fry the perfect egg.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-m-6 col-sm-1 howToCol">
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/h5gcJjOSDv4" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">How to Fry a Steak</h5>
+                        <p class="card-text">Jamie Oliver explains how to create the perfect steak</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER AREA-->
+    <footer id="main-footer" class="text-center p-4">
+        <ul class="social-footer">
+            <li><a href="#"><img src="/assets/img/facebook.png" alt="Facebook Logo" /></a></li>
+            <li><a href="#"><img src="/assets/img/instagram.png" alt="Instagram Logo" /></a></li>
+            <li><a href="#"><img src="/assets/img/twitter.png" alt="Twitter Logo" /></a></li>
+        </ul>
+        <div class="fluid-container">
+            <div class="row">
+                <!-- Dynamically changes the date each year using JavaScript-->
+                <p><span id="date">2022</span>
+                    <span class="footer-logo "> Yummy Chef, Inc. All rights </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- END OF FOOTER AREA-->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="/assets/javascript/main.js"></script>
+    <!--FONT AWESOME implementation so that icons are scalable-->
+    <script src="https://kit.fontawesome.com/8155d27bdf.js" crossorigin="anonymous"></script>
+</body>

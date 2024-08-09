@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta name="keywords" content="Food, Cooking, Photography, Recipes, Guacamole, Wine, Thai, Sushi, Eating, Baking">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--This adds a favicon item to the tab which is a nice touch-->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <title>YummyChef</title>
+
+  <!-- Favicon related: used to change the tab color on Chrome mobile devices -->
+  <meta name="theme-color" content="#000000">
+</head>
+
+<!-- On the load of the body we have a function that observes when the user gets to the about us part for an animation -->
+
+<body onLoad="animate()">
+  <!-- Create the top container with the logo and the search bar and some links using a flexbox approach-->
+  <header>
+    <div class="row container-fluid">
+      <div class="d-flex flex-row justify-content-between align-items-center">
+        <div class="hide_sm_screen">
+          <div class="d-inline-flex ">
+            <input class="form-control mx-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-dark" type="submit">Search</button>
+          </div>
+
+        </div>
+
+        <div class="py-2">
+          <!-- I created the logo myself -->
+          <img src="assets/img/YummyChefLogo.JPG" alt="Yummy Chef Logo">
+        </div>
+        <div class="hide_sm_screen">
+          <a href="index.html#about_link" class="link-secondary px-2">About</a>
+          <a href="contactus.html" class="link-secondary px-2">Contact</a>
+          <a href="index.html#signup_link" class="link-secondary px-2">Sign Up</a>
+        </div>
+      </div>
+    </div>
+    <!-- End of top header-->
+
+    <!-- Here I add in a horizontal gutter for styling -->
+    <hr class="top" />
+
+    <!-- ?Navigation Bar code with bootstrap adaptation  -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="myNav">
+      <!--? The button will only appear once the navbar items can't fit into the screen space anymore-->
+      <div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <!--These are the items contained in the navbar and in the toggle button, bootstrap makes this whole process easier-->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="recipes.html">Recipes</a>
+          </li>
+          <!-- Here I implement some dropdown functionality, this is extremely useful to quickly jump to different parts of the how to page-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="howto.html" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              How To
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="howto.html#dicing">Cutting/Dicing</a></li>
+              <li><a class="dropdown-item" href="howto.html#frying">Frying/Deep Frying</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact Us</a>
+          </li>
+          <!-- The following navbar items are hidden on larger screens and shown under the toggle button on
+            smaller screens, this adjustment is made for neatness-->
+          <li class="nav-item">
+            <div class="big_scr_hide">
+              <a class="nav-link" href="index.html#about_link">About</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="big_scr_hide">
+              <a class="nav-link" href="index.html#signup_link">Sign Up</a>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navigation Bar code with bootstrap adaptation -->
+  </header>
+
+
+  <!-- Jumbotron to show the subscribe button 
+       I learned all jumbotron information from the official bootstrap website and adapted it according to my needs-->
+  <!-- The image seen for this is all done using css -->
+  <div class="jumbotron_container">
+    <div class="jumbotron jumbotron-fluid">
+      <h1 class="display-4">Join Our Newsletter</h1>
+      <p class="lead">Subscribe to our magazine to recieve notifications monthly.</p>
+      <hr class="jumbo">
+      <p class="lead">We also pick a lucky winner to receive designer cookware in the mail every month.</p>
+      <p class="lead">
+        <a class="btn btn-light btn-lg" href="#signup_link" role="button">Subscribe</a>
+      </p>
+    </div>
+  </div>
+  <!-- Jumbotron to show the subscribe button -->
+
+  <!-- HOME ICON SECTION -->
+  <section id="home-icons" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 text-center">
+          <!-- Here we add in icons for the different pieces of information, I am using awesome fonts to do this -->
+          <!-- A standard animation is added here, this is handled by the css file -->
+          <i class="fa fa-solid fa-utensils mb-2 fadeInLeft"></i>
+          <h3>Learn to Cook</h3>
+          <p>From beginner to advanced we have archives to help you with any cooking tasks.</p>
+        </div>
+
+        <div class="col-md-4 mb-4 text-center">
+          <i class="fa fa-solid fa-pizza-slice mb-2 fadeInLeft"></i>
+          <h3>Try New Foods</h3>
+          <p>Our recipe archives have all sorts of different dishes to tantalize those taste buds.</p>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+          <i class="fa fa-solid fa-comment-dots mb-2 fadeInLeft"></i>
+          <h3>Meet Likeminded People</h3>
+          <p>Join our cooking club events to meet other chefs in your area.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF HOME ICON SECTION -->
+
+  <!-- JUMBOTRON 2 to show the about us information -->
+  <!-- I added a very simple animation here and implemented some javascript to make this easier for myself by looping through all the animations 
+       /* I learned how to do this from https://www.youtube.com/watch?v=19jD-DcOBtQ 
+          and then adapted it to have slightly different animations for my site by applying it to text and only usingthe fade left option*/-->
+  <div class="jumbotron_container">
+    <a id="about_link"></a>
+    <div class="jumbotron jumbotron-fluid jumbotron_animate" id="About_Jumbo">
+      <h1 class="display-4 animation">About Us</h1>
+      <p class="animation lead">We are a group of passionate chefs that started an online blog</p>
+      <p class="animation lead">to share our passion for food and meet other people </p>
+      <p class="animation lead">that are interested in photographing, eating and cooking food</p>
+    </div>
+  </div>
+  <!-- END OF JUMBOTRON 2 to show the about us information -->
+
+
+  <!-- PHOTO GALLERY -->
+  <!-- The cool hover effect that is seen here was adapted from the code seen in https://bbbootstrap.com/snippets/image-glassomorphism-hover-effect-12950028
+    I changed it by adding each container to my photo gallery grid and adapting the animation slightly to be faster and adjusting the code so that the pictures are still reactive-->
+  <div class="container-fluid">
+    <div class="row">
+      <h1 class="main_header"> The winners of our food Photography Competition</h1>
+      <h4 class="main_header" id="subheader">To enter our monthly food photography competition <a href="contactus.html"
+          class="link-secondary px-2">click here</a></h4>
+    </div>
+    <div class="row mt-5 gallery_animate">
+      <div class="col-md-4">
+        <!-- Image by Michael Gaida (https://pixabay.com/users/MichaelGaida-652234/ from Pixabay -->
+        <div class="image-container photo_animate"> <img src="assets/img/pexels-faizan-8753672.jpg"
+            alt="Photo of a feast">
+          <div class="content">
+            <p>1st Place Winner: Faizan</p>
+            <p>He made a delicious feast for his family including a charcuterie board</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <!-- Photo by Valeria Boltneva: https://www.pexels.com/photo/strawberries-blackberries-and-sliced-fruits-1510693/ -->
+        <div class="image-container photo_animate"> <img src="assets/img/pexels-valeria-boltneva-1510693.jpg"
+            alt="Photo of fruit bowl">
+          <div class="content">
+            <p>2nd Place Winner: Valeria Boltneva</p>
+            <p>She made a divine chia seed with raspberry puree</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <!-- Photo by Sebastian Coman Photography : https://www.pexels.com/photo/salmon-dish-on-a-ceramic-plate-3655916/ -->
+        <div class="image-container photo_animate"> <img src="assets/img/pexels-sebastian-coman-photography-3655916.jpg"
+            alt="Photo of Salmon">
+          <div class="content">
+            <p>3rd Place Winner: Sebastian Coman</p>
+            <p>This is a salmon dish plated excellently with a courgette mash</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER SECTION -->
+  <!--link to allow the user to jump to this portion of the page-->
+  <!-- Code adapted from https://bbbootstrap.com/snippets/bootstrap-subscribe-our-newsletter-form-image-38001349 
+       I changed it to be a responsive design by using the d-flex box and also taking out the rows statement 
+       so the form doesn't take up all the screen space-->
+  <!-- I also made the newsletter responsive -->
+
+  <!-- This link allows users to jump to this portion of the page -->
+  <a id="signup_link"></a>
+  <div class="row d-flex justify-content-center align-items-center m-5">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <i class="fa fa-solid fa-envelope"></i>
+          <span class="d-block mt-3">Subscribe to our newsletter so you don't miss new weekly recipes.<br> Every
+            week a winner is chosen to recieve a cool branded cookware item</span>
+          <div>
+            <div class="input-group mb-3 mt-4"> <input type="text" class="form-control" placeholder="Enter email"
+                aria-label="Recipient's username" aria-describedby="button-addon2"> <button
+                class="btn btn-secondary border-rad" type="button" id="button-addon2">Subscribe</button> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END OF NEWSLETTER-->
+
+  <!-- FOOTER AREA-->
+  <footer id="main-footer" class="text-center p-4">
+    <ul class="social-footer">
+      <li><a href="#"><img src="/assets/img/facebook.png" alt="Facebook Logo" /></a></li>
+      <li><a href="#"><img src="/assets/img/instagram.png" alt="Instagram Logo" /></a></li>
+      <li><a href="#"><img src="/assets/img/twitter.png" alt="Twitter Logo" /></a></li>
+    </ul>
+    <div class="fluid-container">
+      <div class="row">
+        <!-- Dynamically changes the date each year using JavaScript-->
+        <p><span id="date">2022</span>
+          <span class="footer-logo "> Yummy Chef, Inc. All rights </span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- END OF FOOTER AREA-->
+
+  <!-- SCRIPTS - added at the end to make the page load faster-->
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script src="/assets/javascript/main.js"></script>
+  <!--FONT AWESOME implementation so that icons are scalable-->
+  <script src="https://kit.fontawesome.com/8155d27bdf.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

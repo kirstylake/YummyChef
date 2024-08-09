@@ -1,0 +1,764 @@
+
+
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap');
+
+html {
+  font-size: 100%;
+}
+
+.recipes img {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+
+/* =================================================================
+Bootstrap Navbar Styling 
+- Making the items in the navbar evenly spaced out
+====================================================================
+*/
+/* Makes the nav bar the entire size of the screen */
+.nav {
+  width: 100%
+}
+
+/* formats the navigation list items to be spread accross the nav bar */
+.nav li {
+  width: 20%;
+  text-align: center;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+
+/*Hides the top functionalities when the screen becomes smaller ie hides the about, contact and signup links */
+@media screen and (max-width:992px) {
+  .hide_sm_screen {
+    display: none;
+  }
+
+  /* Aligns my items in the collapsed nav bar so they are centered and each list item is on one line */
+   .nav-item {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 40%
+  }
+
+  /* Ensure the dropdown items are aligned properly */
+  .dropdown-menu li {
+    padding-left: 0%;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    /* This just reaerranges the navbar so the collapsed version is in the center of the screen */
+    /* Adding the term !important, allows me to override bootstraps standard code */
+    justify-content: left !important; 
+    padding-left: 20px !Important;
+  } 
+
+
+}
+
+/* Adds the contact us and log in links to the collapsed navbar when screen sizes are smaller */
+@media screen and (min-width:992px) {
+  .big_scr_hide {
+    display: none;
+  }
+
+}
+
+
+/* =================================================================
+Horizontal Dividers
+====================================================================
+*/
+
+/* These are some basic lines that make the document look better there are 3 different styles used in the website */
+hr.top {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  width: 100%;
+}
+
+hr.jumbo {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  width: 50%;
+}
+
+hr.other1 {
+  border: 0;
+  height: 0;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* =================================================================
+Jumbotron Stylings 
+- Making the background image for the jumbotron to give it a sleek look
+- Adding a dark overlay on top of the image so the white text pops 
+- Adding animations to the jumbotron text
+====================================================================
+*/
+.jumbotron {
+  padding-right: 20%;
+  padding-top: 6%;
+  padding-bottom: 10%;
+  padding-left: 5%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../img/pexels-pixabay-326279.jpg);
+  background-size: cover;
+  color: white;
+}
+
+/* Photo by EKATERINA BOLOVTSOVA from Pexels */
+#dicing_jumbo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../img/pexels-ekaterina-bolovtsova-5662345.jpg);
+}
+
+/* Photo by Engin Akyurt from Pexels */
+#frying_jumbo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../img/pexels-engin-akyurt-2235832.jpg);
+}
+
+/* Photo by Karolina Grabowska: https://www.pexels.com/photo/slices-of-fresh-ripe-orange-4022107/ */
+#events_jumbo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../img/pexels-roman-odintsov-4553111.jpg);
+}
+
+/*adds a subtle animation to the jumbotron text to fade it in */
+.lead {
+  animation: fadeIn 5s;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+#About_Jumbo {
+  padding-right: 5%;
+  padding-top: 10%;
+  padding-bottom: 30%;
+  padding-left: 5%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../img/pexels-mikhail-nilov-8093548.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.fadeInTop {
+  -webkit-animation: fadeInTop 1.2s both;
+  -moz-animation: fadeInTop 1.2s both;
+  -o-animation: fadeInTop 1.2s both;
+  animation: fadeInTop 1.2s both;
+}
+
+/* Starts animation at -50 px and ends at 0px */
+@-webkit-keyframes fadeInTop {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+}
+
+@-moz-keyframes fadeInTop {
+  0% {
+    opacity: 0%;
+    -moz-transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+}
+
+@-o-keyframes fadeInTop {
+  0% {
+    opacity: 0%;
+    -o-transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0%;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/*adds a subtle animation to the jumbotron text to fade it in */
+/*Allows the fade in effect to work on all browsers*/
+.fadeInLeft {
+  -webkit-animation: fadeInLeft 1.2s both;
+  -moz-animation: fadeInLeft 1.2s both;
+  -o-animation: fadeInLeft 1.2s both;
+  animation: fadeInLeft 1.2s both;
+}
+
+/* Starts animation at -50 px and ends at 0px */
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+}
+
+@-moz-keyframes fadeInLeft {
+  0% {
+    opacity: 0%;
+    -moz-transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0px);
+  }
+}
+
+@-o-keyframes fadeInLeft {
+  0% {
+    opacity: 0%;
+    -o-transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0%;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* =================================================================
+Icons from Awesome Font styling 
+- They atart off very small so I make them slightly bigger here
+====================================================================
+*/
+.fa {
+  font-size: 55px;
+}
+
+
+/* =================================================================
+Footer styling 
+- Remove padding
+====================================================================
+*/
+/* Remove any padding to the left inside the list */
+.social-footer {
+  display: inline-flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.social-footer li {
+  padding: 0.75em;
+}
+
+/* Fix the size of the icons in the footer */
+.social-footer img {
+  width: 48px;
+  height: 48px;
+  /* Add a subtle transition that is easy on the eyes, instead of sharply switching color on mouse hover */
+  -moz-transition: .3s ease;
+  -webkit-transition: .3s ease;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.social-footer img:hover {
+  -moz-filter: drop-shadow(0px 0 5px black);
+  -webkit-filter: drop-shadow(0px 0 5px black);
+  -webkit-filter: drop-shadow(0px 0 5px black);
+  filter: drop-shadow(0px 0 5px #00005050);
+  opacity: 0.7;
+}
+
+.footer-logo {
+  color: black;
+}
+
+/* =================================================================
+Media Stylings
+====================================================================
+*/
+.display-4 {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+/* =================================================================
+How To Page Stylings
+-Style the video so that it is responsive
+====================================================================
+*/
+/* Maintains the size of the youtube video no matter te sizing */
+@media only screen and (min-width: 768px) {
+  iframe {
+    height: 26em;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+/* This is to ensure that the formatting looks good when resized to smaller screens */
+
+
+.HowTo {
+  padding-top: 5%;
+}
+
+
+/* This adjusts the layout so when only one card is shown there is adequate padding between elements */
+@media screen and (max-width:992px) {
+
+  .howToCol {
+    padding-top: 5%
+  }
+
+  .HowTo {
+    padding-top: 0%;
+  }
+
+  .jumbrotron_howto {
+    padding-top: 5%
+  }
+}
+
+
+/* =================================================================
+EVENTS STYLING
+====================================================================
+*/
+/* Forces all images in the cards to be the same size*/
+.card-img-top {
+  width: 100%;
+  height: 30vw;
+  object-fit: cover;
+}
+
+/* This is to ensure that the formatting looks good when resized to smaller screens */
+/* .jumbrotron_howto {
+  padding-top: 5%
+} */
+
+.eventRow {
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.eventCol {
+  padding: 5%;
+}
+
+/* This adjusts the layout so when only one card is shown there is adequate padding between elements */
+@media screen and (max-width:992px) {
+
+  .eventRow {
+    padding-top: 0%
+  }
+
+  .eventColumn {
+    padding-top: 5%;
+  }
+}
+
+
+/* =================================================================
+PHOTO GALLERY STYLING
+====================================================================
+*/
+
+/* This idea was inspired by https://bbbootstrap.com/snippets/image-glassomorphism-hover-effect-12950028 
+   I adjusted it slighly by changing the blur property to blur more so that the writing will show better on the image,
+   I also changed the text colour to work better with lighter photos, and I removed some of the styling that wouldn't allow responsive design
+   I also removed the pointer from the styling as I do not want these elements to be clickable
+ */
+.main_header {
+  text-align: center;
+  padding-top: 5%
+}
+
+#subheader {
+  padding-top: 1%
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px
+}
+
+.image-container .content {
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  bottom: -140px;
+  left: 14px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 1s;
+  overflow: hidden
+}
+
+.content p {
+  background: transparent;
+  color: rgb(0, 0, 0)
+}
+
+.image-container:hover .content {
+  bottom: 14px
+}
+
+/* =================================================================
+NEWSLETTER STYLING
+====================================================================
+*/
+
+/* Inspired by the code recommended by https://bbbootstrap.com/snippets/bootstrap-subscribe-our-newsletter-form-image-38001349 */
+
+body {
+  background-color: #F9A826
+}
+
+.rows {
+  height: 100vh
+}
+
+/* Make the newsletter form appear in a box with adjustable fonts according to screen size */
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: calc(1.5em + .75rem + 2px);
+  padding: .575rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 52px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.card {
+  padding: 20px;
+  background-color: #eee;
+  padding-bottom: 5%;
+  padding-top: 5%
+}
+
+
+/* Adds a nice hover effect to the subscribe button when the user hovers over it */
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #f9a826;
+  outline: 0;
+  box-shadow: none
+}
+
+.border-rad {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: #fff;
+  background-color: #f9a826;
+  border-color: #f9a826
+}
+
+.border-rad:hover {
+  background-color: #f9a826;
+  border-color: #f9a826
+}
+
+
+/* =================================================================
+CONTACT US PAGE STYLING
+====================================================================
+*/
+
+.wrapper {
+  height: 100vh;
+  background: #000;
+  background: url("../img/pexels-charlotte-may-5947019.jpg");
+  background-size: cover;
+  width: 100%
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8)
+}
+
+.contact-us {
+  margin-top: 50px;
+  margin-bottom: 50px
+}
+
+.contact {
+  color: #fff
+}
+
+/* Adjusts the alignment from the wording to the icon */
+.address {
+  margin-top: 14px !important;
+  margin-left: 14px
+}
+
+/* Adjusts the colour of the writing of the headers */
+.address span {
+  color: #7B1FA2;
+}
+
+.icons {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.icons i {
+  font-size: 20px
+}
+
+.forms {
+  padding: 20px
+}
+
+.inputs input {
+  margin-bottom: 13px;
+  border: none;
+  border-bottom: 2px solid #eee
+}
+
+.inputs input:focus {
+  margin-bottom: 13px;
+  border: none;
+  border-bottom: 2px solid #7B1FA2;
+  box-shadow: none
+}
+
+.inputs textarea {
+  margin-bottom: 13px;
+  border: none;
+  border-bottom: 2px solid #eee;
+  width: 100%;
+  resize: none
+}
+
+.inputs textarea:focus {
+  margin-bottom: 13px;
+  border: none;
+  border-bottom: 2px solid #7B1FA2;
+  box-shadow: none;
+  resize: none
+}
+
+.form-control {
+  padding: .375rem .25rem
+}
+
+/* =================================================================
+RECIPES PAGE STYLING
+====================================================================
+*/
+
+
+/* Make the stars on the recipe rating small */
+.ratings .fa {
+  font-size: 1.5rem
+}
+
+.rating-color {
+  color: #fbc634 !important
+}
+
+/* Turn the card into a clickable card with a hover effect and a cursor change,
+I learned how to do this here: https://ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers
+Here we take away the border of the card which is usually present, I changed th ecode to only apploy to my recipe card because I don't
+want this to affect all the cards I've made */
+
+#recipecard {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+  transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+  cursor: pointer;
+}
+
+#recipecard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+
+.recipes .card {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+  transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+  cursor: pointer;
+}
+
+.recipes .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+
+/* =================================================================
+SINGLE RECIPES PAGE STYLING
+====================================================================
+*/
+/* Make the colour of this a light grey */
+.recipe-duration {
+  color: #928d8d;
+}
+
+/* Add some spacing for the recipe items */
+li {
+  padding-bottom: 10px;
+  padding-left: 10px
+}
+
+/* Make the recipe stars bigger for this sectiom */
+#recipe_stars .fa {
+  font-size: 3.0rem
+}
+
+
+/* Change the layout of the single recipes page when the page gets smaller */
+@media screen and (max-width:977px) {
+  #single-recipe-card .card {
+    border: 0px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+    margin-left: 0px;
+    position: absolute;
+  }
+
+
+  /* Ensure when the screen size is small the numbers don't get cut off */
+  .RecipeMethod {
+    margin-left: 20px;
+    padding-left:20px;
+  }
+
+  /* This makes the headings in the middle */
+  .single-preparation-step {
+    justify-content: center;
+  }
+
+  /* This allows the recipe headline to appear like it in the middle */
+  .recipe-headline {
+    margin-left: 20%;
+  }
+
+  /* This reduces the font size of the stars on the recipe page */
+  .fa {
+    font-size: 20px;
+  }
+
+
+  /* We are setting the order of the elements to be shown, this is important so that
+  the ingredients is shown before the method on smaller screens */
+  #IngredientOrder{
+    order: 1;
+  }
+
+  #MethodOrder{
+    order: 2;
+  }
+
+}
+
+/* =================================================================
+REPORT CSS STYLING
+====================================================================
+*/
+
+.report {
+  font-size: 16px;
+  background-color: #eee;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 50px;
+}

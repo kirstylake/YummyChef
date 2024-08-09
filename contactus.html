@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="keywords" content="Food, Cooking, Photography, Recipes, Guacamole, Wine, Thai, Sushi, Eating, Baking">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>YummyChef</title>
+
+    <!-- Favicon related: used to change the tab color on Chrome mobile devices -->
+    <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+    <!-- Create the top container with the logo and the search bar and some links using a flexbox approach-->
+    <header>
+        <div class="row container-fluid">
+            <div class="d-flex flex-row justify-content-between align-items-center">
+                <div class="hide_sm_screen">
+                    <div class="d-inline-flex ">
+                        <input class="form-control mx-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark" type="submit">Search</button>
+                    </div>
+
+                </div>
+
+                <div class="py-2">
+                    <!-- I created the logo myself -->
+                    <img src="assets/img/YummyChefLogo.JPG" alt="Yummy Chef Logo">
+                </div>
+                <div class="hide_sm_screen">
+                    <a href="index.html#about_link" class="link-secondary px-2">About</a>
+                    <a href="contactus.html" class="link-secondary px-2">Contact</a>
+                    <a href="index.html#signup_link" class="link-secondary px-2">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <!-- End of top header-->
+
+        <!-- Here I add in a horizontal gutter for styling -->
+        <hr class="top" />
+
+        <!-- ?Navigation Bar code with bootstrap adaptation  -->
+        <nav class="navbar navbar-expand-lg navbar-light" id="myNav">
+            <!--? The button will only appear once the navbar items can't fit into the screen space anymore-->
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <!--These are the items contained in the navbar and in the toggle button, bootstrap makes this whole process easier-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Recipes</a>
+                    </li>
+                    <!-- Here I implement some dropdown functionality, this is extremely useful to quickly jump to different parts of the how to page-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="howto.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            How To
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="howto.html#dicing">Cutting/Dicing</a></li>
+                            <li><a class="dropdown-item" href="howto.html#frying">Frying/Deep Frying</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html" aria-current="page">Contact Us</a>
+                    </li>
+                    <!-- The following navbar items are hidden on larger screens and shown under the toggle button on
+                smaller screens, this adjustment is made for neatness-->
+                    <li class="nav-item">
+                        <div class="big_scr_hide">
+                            <a class="nav-link" href="index.html#about_link">About</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="big_scr_hide">
+                            <a class="nav-link" href="index.html#signup_link">Sign Up</a>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navigation Bar code with bootstrap adaptation -->
+    </header>
+
+    <!-- Inspired by https://bbbootstrap.com/snippets/bootstrap-contact-us-form-overlay-background-18825276 -->
+    <!-- I added in my own unique tags to this code so that the styling of this section doesn't affect the rest of my pages
+         I also made quite a few margin and padding modifications so that this page would translate well to a smaller screen-->
+
+    <div class="wrapper">
+        <div class="overlay">
+            <!-- I've changed this design to use flex boxes so that it resizes well -->
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-9">
+                    <div class="contact-us text-center">
+                        <h3 class="contact">Contact Us</h3>
+                        <!--I added some padding to the paragrapphs her so that this looks better on a phone-->
+                        <div class="contact">
+                            <p class="mb-5 px-5">If you would like to enter our competition, email your
+                                entry to
+                                the email address below</p>
+                        </div>
+                        <div class="row">
+                            <!-- I added some padding to the bottom of this so that when the screen is small it still looks good-->
+                            <div class="col-md-6 mb-5">
+                                <div class="mt-5 text-center px-3">
+                                    <!-- I used awesome font sicons here and aligned the text so that the details are displayed neatly -->
+                                    <div class="d-flex flex-row align-items-center mt-3"> <span class="icons"><i
+                                                class="fa fa-map-marker"></i></span>
+                                        <div class="address text-left">
+                                            <p class="contact">50 Alcade Road, Sandton City</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center mt-3"> <span class="icons"><i
+                                                class="fa fa-phone"></i></span>
+                                        <div class="address text-left">
+                                            <p class="contact">+27 76 456 1090</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center mt-3"> <span class="icons"><i
+                                                class="fa fa-envelope-o"></i></span>
+                                        <div class="address text-left">
+                                            <p class="contact">contact@yummychef.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Contact Form -->
+                            <div class="col-md-6">
+                                <div class="text-center">
+                                    <div class="forms p-4 py-5 bg-white">
+                                        <h5>Send Message</h5>
+                                        <!-- We use inputs in our form to capture the details of the user -->
+                                        <div class="mt-4 inputs"> <input type="text" class="form-control"
+                                                placeholder="Name"> <input type="text" class="form-control"
+                                                placeholder="Email"> <textarea class="form-control"
+                                                placeholder="Type your message"></textarea> </div>
+                                        <div class="button mt-4 text-left"> <button class="btn btn-dark">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End of Contact Form -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS - added at the end to make the page load faster-->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="/assets/javascript/main.js"></script>
+    <!--FONT AWESOME implementation so that icons are scalable-->
+    <script src="https://kit.fontawesome.com/8155d27bdf.js" crossorigin="anonymous"></script>
+</body>

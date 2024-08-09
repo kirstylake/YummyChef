@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="keywords" content="Food, Cooking, Photography, Recipes, Guacamole, Wine, Thai, Sushi, Eating, Baking">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--This adds a favicon item to the tab which is a nice touch-->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>YummyChef</title>
+
+    <!-- Favicon related: used to change the tab color on Chrome mobile devices -->
+    <meta name="theme-color" content="#000000">
+</head>
+
+<!-- The onLoad function will call the javascript function that was created to dynamically fill the webpage -->
+
+<body onLoad="getRecipe()">
+    <!-- Create the top container with the logo and the search bar and some links using a flexbox approach-->
+    <header>
+        <div class="row container-fluid">
+            <div class="d-flex flex-row justify-content-between align-items-center">
+                <div class="hide_sm_screen">
+                    <div class="d-inline-flex ">
+                        <input class="form-control mx-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark" type="submit">Search</button>
+                    </div>
+
+                </div>
+
+                <div class="py-2">
+                    <!-- I created the logo myself -->
+                    <img src="assets/img/YummyChefLogo.JPG" alt="Yummy Chef Logo">
+                </div>
+                <div class="hide_sm_screen">
+                    <a href="index.html#about_link" class="link-secondary px-2">About</a>
+                    <a href="contactus.html" class="link-secondary px-2">Contact</a>
+                    <a href="index.html#signup_link" class="link-secondary px-2">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <!-- End of top header-->
+
+        <!-- Here I add in a horizontal gutter for styling -->
+        <hr class="top" />
+
+        <!-- ?Navigation Bar code with bootstrap adaptation  -->
+        <nav class="navbar navbar-expand-lg navbar-light" id="myNav">
+            <!--? The button will only appear once the navbar items can't fit into the screen space anymore-->
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <!--These are the items contained in the navbar and in the toggle button, bootstrap makes this whole process easier-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Recipes</a>
+                    </li>
+                    <!-- Here I implement some dropdown functionality, this is extremely useful to quickly jump to different parts of the how to page-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="howto.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            How To
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="howto.html#dicing">Cutting/Dicing</a></li>
+                            <li><a class="dropdown-item" href="howto.html#frying">Frying/Deep Frying</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <!-- The following navbar items are hidden on larger screens and shown under the toggle button on
+            smaller screens, this adjustment is made for neatness-->
+                    <li class="nav-item">
+                        <div class="big_scr_hide">
+                            <a class="nav-link" href="index.html#about_link">About</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="big_scr_hide">
+                            <a class="nav-link" href="index.html#signup_link">Sign Up</a>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navigation Bar code with bootstrap adaptation -->
+    </header>
+
+    <!-- RECIPES HEADER JUMBOTRON-->
+    <div class="jumbotron_container jumbrotron_howto mt-5 ">
+        <div class="jumbotron jumbotron-fluid" id="events_jumbo">
+            <h1 class="display-4">Recipes</h1>
+            <p class="lead" id="jumbowrite">No Fluff, Just Recipes</p>
+            <hr class="jumbo">
+        </div>
+    </div>
+    <!-- END OF RECIPES HEADER -->
+
+    <div class="recipe-content-area">
+        <div class="container">
+            <div>
+                <!-- This is a link that looks like a button due to the bootstrap class that guides the user back to the recipes -->
+                <a class="btn btn-outline-secondary mt-5" href="recipes.html"> Back to recipes</a>
+            </div>
+
+            <!-- Header of Recipe Information -->
+            <div class="row mb-5">
+                <div class="col-lg-6 col-md-6 col-sm-12" id="RecipeHeader">
+                    <div class="recipe-headline mt-5">
+                        <!-- The fields are dynamically filled -->
+                        <span id="DateAdded"></span>
+                        <h2 id="RecipeName">#</h2>
+                        <div class="recipe-duration">
+                            <!-- Thes fields are dynamically filled using their IDs and JS, the # are place holders-->
+                            <h6 id="RecipePrep">#</h6>
+                            <h6 id="RecipeCook">#</h6>
+                            <h6 id="RecipeYields">#</h6>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="recipe-ratings text-right my-5">
+                            <!-- Star rating are dynamically added here using Javascript -->
+                            <div class="ratings recipe-headline" id="recipe_stars">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="mt-2">
+                        <div class="card border-0" id="single-recipe-card">
+                            <!-- The image source will be dynamically added here using Javascript-->
+                            <!-- I am reusing the same hover over image effect that I used in the index page-->
+                            <div class="image-container">
+                                <!-- The fields with # are going to br filled dynamically -->
+                                <img class="card-img-recipe rounded content-image" id="recipe_img" alt="#" src="#">
+                                <div class="content">
+                                    <!-- Details about this recipe are dynamically added here -->
+                                    <p id="AboutRecipe"></p>
+                                </div>
+                            </div>
+                            <!-- The rounded feature makes the edges of the image appear more rounded -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Header of Recipe Information -->
+
+                <!-- Horizontal Divider -->
+                <hr class="top" />
+
+                <!-- Method Column -->
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-12" id="MethodOrder">
+                        <!-- Single Preparation Step -->
+                        <div class="single-preparation-step d-flex mb-5">
+                            <h4>Method</h4>
+                        </div>
+                        <!-- The recipe method is dynamically added using a javascript function -->
+                        <div class="row">
+                            <ol class="RecipeMethod">
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Ingredient Column -->
+                    <div class="col-lg-4 col-med-4 col-sm-12" id="IngredientOrder">
+                        <!-- Single Preparation Step -->
+                        <div class="single-preparation-step d-flex mb-5">
+                            <h4>Ingredients</h4>
+                        </div>
+                        <!-- The recipe Ingredients are dynamically added using a javascript function -->
+                        <div class="row">
+                            <ul class="RecipeIngredients mx-4">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER AREA-->
+    <footer id="main-footer" class="text-center p-4">
+        <ul class="social-footer">
+            <li><a href="#"><img src="/assets/img/facebook.png" alt="Facebook Logo" /></a>
+            </li>
+            <li><a href="#"><img src="/assets/img/instagram.png" alt="Instagram Logo" /></a></li>
+            <li><a href="#"><img src="/assets/img/twitter.png" alt="Twitter Logo" /></a>
+            </li>
+        </ul>
+        <div class="fluid-container">
+            <div class="row">
+                <!-- Dynamically changes the date each year using JavaScript-->
+                <p>&copy; <span id="date"></span>
+                    <span class="footer-logo "> Yummy Chef, Inc. All rights, Built by Kirsten Lake </span>
+
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- END OF FOOTER AREA-->
+
+    <!-- SCRIPTS - added at the end to make the page load faster-->
+    <!-- Bootstrap Bundle with Popper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="/assets/javascript/main.js"></script>
+    <!--FONT AWESOME implementation so that icons are scalable-->
+    <script src="https://kit.fontawesome.com/8155d27bdf.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
